@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--//IMPT: This enables Thymeleaf engine to work!-->
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<body>
+
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light"> <!---navbar--->
+
+    <a class="navbar-brand" href="home.html">
+        <img src="images/pet-pals-logos/pet-pals-transparent-min.png" class = "logo" width=100px></a>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> <!----this is for the hamburger menu when minimised--->
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{home}">Home </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{about}">About Us</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{profile}">Pet Pals</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#contactus-modal">Contact Us</a>
+            </li>
+
+        </ul>
+    </div>
+</nav> <!---navbar---->
+
+
+
+<div th:fragment="menuModal" class="modal fade" id="contactus-modal" tabindex="-1"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-scrollable">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form action="mailto:Pet.palssg@gmail.com" method="POST">
+
+                    <h4>You may reach the Pet-Pals team at Pet.palssg@gmail.com</h4>
+
+
+
+                    <div class="buttoncol-sm-6">
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+
+                </form>
+
+
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div> <!----end of mordal ----->
+
+
+</body>
+</html>

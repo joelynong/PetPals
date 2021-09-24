@@ -1,0 +1,247 @@
+<!doctype html>
+<!--//IMPT: This enables Thymeleaf engine to work!-->
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PET PALS|About Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Link to 2 external style sheets: global.css and about.css> -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- This is the favicon icon which will appear on browser tabs -->
+    <link rel="icon" href="images/pet-pals-logos/pet-pals-favicon-transparent.ico">
+
+</head>
+
+<body>
+
+<div th:insert="fragments/navbar.html :: navbar"></div>
+<div th:insert="fragments/navbar.html :: menuModal"></div>
+
+
+
+
+    <!-- Section 1 is about Pet Pals mission and values -->
+    <div class="container-fluid">
+
+        <section class="section-1">
+
+            <h1 class="section-heading">OUR MISSION</h1>
+            <div class="mission-wrapper">
+                <p class="section-1-text">At Pet Pals, we are passionate about our animals and we want to build
+                    a
+                    community of
+                    responsible and loving pet owners. The bond between humans and animals is not just good
+                    for human health, it can also help build community.
+                    People with pets often find that activities with their companion animal creates
+                    connections with other people.</p>
+
+                <img class="section-1-img" src="images/about-images/pets-buddies-min.jpg" alt="Who are we at PET PALS">
+            </div>
+
+        </section>
+
+
+
+        <section class="section-2">
+            <h1 class="section-heading">Our Values</h1>
+            <div class="values-wrapper">
+                <div class="value">
+
+                    <h4 class="value-text">Proactiveness</h4>
+                    <h4 class="value-text">Excellence</h4>
+                    <h4 class="value-text">Teamwork</h4> <br><br>
+                    <h4 class="value-text-2">Persistence</h4>
+                    <h4 class="value-text-2">Adaptability</h4>
+                    <h4 class="value-text-2">Love of Learning</h4>
+                    <h4 class="value-text-2">Self Awareness</h4>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- NEW Section 3 is about the Team introduction - Joelyn, Timothy, Jasmine and David -->
+
+        <!-- About Joelyn -->
+        <section class="section-3">
+            <h1 class="section-heading">The Team</h1>
+            <div class="team-wrapper">
+                <div class="team-member">
+                    <img class="team-member-img" src="images/about-images/joelyn.jpg" alt="Joelyn and bunny">
+                    <h2 class="team-member-name">Joelyn Ong | Lead</h2>
+                    <h3 class="aka">a.k.a. Bunny Friend Forever (BFF)</h3>
+
+
+                    <h4 class="connect-btn">Connect with me</h4>
+                    <div class="connect">
+                        <a href="https://www.linkedin.com/in/joelynong" target="_blank"><img
+                                src="images/about-images/linkedin.png" alt="Connect with Joelyn on Linkedin"></a>
+
+                        <a href="https://www.github.com/joelynong" target="_blank"><img
+                                src="images/about-images/github.png" alt="Connect with Joelyn on GitHub"></a>
+                    </div>
+
+                    <div class="story-btn" title="My Story">
+                        <div class="story-btn-line"></div>
+                    </div>
+                    <div class="story">
+                        <h4 class="story-heading">Story</h4>
+                        <p class="story-paragraph">Joelyn's core passion is active learning that cultivates an agile and
+                            collaborative
+                            mindset
+                            in everything she does. She is fueled by curiosity about IOT and its boundless
+                            integration
+                            with web development and currently reskilling
+                            as a Jr Full Stack Developer.<br><br>Joelyn enjoys art and music appreciation
+                            and
+                            watching
+                            movies in her leisure time. She also takes up children book writing and oral
+                            storytelling.
+                            She is a fan of most animals, and loves the
+                            sensitive and intelligent characteristics of bunnies.</p>
+                    </div>
+                </div>
+
+                <!-- About Timothy -->
+                <div class="team-member">
+                    <img class="team-member-img" src="images/about-images/timothy.jpg" alt="Timothy and dog">
+                    <h2 class="team-member-name">Timothy Chan | Member</h2>
+                    <h3 class="aka">a.k.a. Dog Whisperer</h3>
+
+
+                    <h4 class="connect-btn">Connect with me</h4>
+                    <div class="connect">
+                        <a href="https://linkedin.com/in/timothy-chan-guo-liang" target="_blank"><img
+                                src="images/about-images/linkedin.png" alt="Connect with Timothy on Linkedin"></a>
+
+                        <a href="https://www.github.com/Timotheechan" target="_blank"><img
+                                src="images/about-images/github.png" alt="Connect with Timothy on GitHub"></a>
+                    </div>
+
+                    <div class="story-btn" title="My Story">
+                        <div class="story-btn-line"></div>
+                    </div>
+                    <div class="story">
+                        <h4 class="story-heading">Story</h4>
+                        <p class="story-paragraph">Timothy is a self-proclaimed dog whisperer and an animal activist. He
+                            is
+                            greatly
+                            passionate about
+                            tech and currently going through a bootcamp to be crowned as a Jr Full Stack
+                            Developer.
+                            He
+                            enjoys
+                            taking the unconventional route to solve
+                            a problem and strongly believes that quirky is the new black.</p>
+                    </div>
+                </div>
+
+
+                <!-- About Jasmine -->
+                <div class="team-member">
+                    <img class="team-member-img" src="images/about-images/jasmine.jpg" alt="Jasmine and turtles">
+                    <h2 class="team-member-name">Jasmine Chong | Member</h2>
+                    <h3 class="aka">a.k.a. Turtle Mom</h3>
+
+
+                    <h4 class="connect-btn">Connect with me</h4>
+                    <div class="connect">
+                        <a href="https://www.linkedin.com/in/jascyr" target="_blank"><img
+                                src="images/about-images/linkedin.png" alt="Connect with Jasmine on Linkedin"></a>
+
+                        <a href="https://www.github.com/JasCYR" target="_blank"><img
+                                src="images/about-images/github.png" alt="Connect with jasmine on GitHub"></a>
+                    </div>
+
+                    <div class="story-btn" title="My Story">
+                        <div class="story-btn-line"></div>
+                    </div>
+                    <div class="story">
+                        <h4 class="story-heading">Story</h4>
+                        <p class="story-paragraph">Jasmine loves her turtles. She also loves other reptiles like geckos
+                            and
+                            snakes
+                            (although
+                            not
+                            allowed
+                            in Singapore). She is currently going through a Jr Full Stack Developer Bootcamp and
+                            is
+                            interested
+                            in frontend (HTML & CSS), JavaScript
+                            and React.</p>
+                    </div>
+                </div>
+
+
+                <!-- About David -->
+                <div class="team-member">
+                    <img class="team-member-img" src="images/about-images/david.jpg" alt="David and cat">
+                    <h2 class="team-member-name">David Tong | Member</h2>
+                    <h3 class="aka">a.k.a. Boss Tomcat</h3>
+
+
+                    <h4 class="connect-btn">Connect with me</h4>
+                    <div class="connect">
+                        <a href="https://www.linkedin.com/in/david-in-tech" target="_blank"><img
+                                src="images/about-images/linkedin.png" alt="Connect with David on Linkedin"></a>
+
+                        <a href="https://www.github.com/DavidTHW" target="_blank"><img
+                                src="images/about-images/github.png" alt="Connect with David on GitHub"></a>
+                    </div>
+
+                    <div class="story-btn" title="My Story">
+                        <div class="story-btn-line"></div>
+                    </div>
+                    <div class="story">
+                        <h4 class="story-heading">Story</h4>
+                        <p class="story-paragraph">David has gone to Kitty Island to take photos with them. He is taking
+                            a
+                            long time to
+                            decide
+                            which one
+                            will make a good picture with him.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+<!-- click to go back to top button -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
+
+
+<footer th:fragment="footer" class="navbar navbar-light bg-light">
+    <p class="navbar-text">&copy; 2021 PET PALS </p>
+</footer>
+
+
+    <!-- This is the end of content -->
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js "
+        integrity=" sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+        crossorigin=" anonymous "></script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js "
+        integrity=" sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns "
+        crossorigin=" anonymous "></script>
+<script src="js/homeScript.js"></script>
+    <script src="js/about.js"></script>
+
+
+</body>
+
+</html>
