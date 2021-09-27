@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body onload="getAllPostFromDatabase()">
 <!--//we can now insert the th fragment for navbar and menuModal-->
 <!--for every html pages that need this universal code-->
 <div th:insert="fragments/navbar.html :: navbar"></div>
@@ -70,19 +70,19 @@
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="sticky-top pt-3">
                     <h1>Topics</h1>
-                    <ul class="nav flex-column">
+                    <ul class="nav flex-column" id = "filterPost">
                         <li class="nav-item">
-                            <a class="nav-link active filterselector" href="#" id = "filterPost" data-id = "Recommendations">
+                            <a class="nav-link active filterselector" href="#"  data-id = "Recommendations">
                                 <span data-feather="home" ></span> Recommendations <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link filterselector" href="#" id = "filterPost" data-id = "PetTips">
+                            <a class="nav-link filterselector" href="#" data-id = "PetTips">
                                 <span data-feather="file"></span> Pet Tips
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link filterselector" href="#" id = "filterPost" data-id = "Events">
+                            <a class="nav-link filterselector" href="#" data-id = "Events">
                                 <span data-feather="shopping-cart"></span> Events
                             </a>
                         </li>
@@ -98,7 +98,7 @@
                     <h1 class="h2">Write a post</h1>
                 </div>
                 <form class="border-bottom" onSubmit= "handleOnSubmit(event);">
-                    <label for="formGroupExampleInput">Choose the avatar that represents you:</label>
+                    <label>Choose the avatar that represents you:</label>
                     <div class="form-group">
 
                         <label class="avatars">
@@ -153,7 +153,7 @@
 
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Post Topic</label>
+                        <label>Post Topic</label>
                         <select class="custom-select custom-select-sm" id ="topic">
                             <option value ="Recommendations" selected>Recommendations</option>
                             <option value="PetTips">Pet Tips</option>
@@ -161,20 +161,20 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Your Name</label>
+                        <label>Your Name</label>
                         <input type="text" class="form-control" id="name"
                             placeholder="Input your name here" maxlength="15" required />
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput2">Post</label>
-                        <input type="text" class="form-control" id="text"
-                            placeholder="Post about your favourite pet here!" maxlength="80"required />
+                        <label>Post</label>
+                        <textarea class="form-control" id="text"
+                                  placeholder="Post about your favourite pet here!" maxlength="500" rows="3" required></textarea>
                     </div>
 
                     <div class="form-group fileinput" >
-                        <label for="exampleFormControlFile1">Upload Image Here</label>
+                        <label>Upload Image Here</label>
                         <input type="file" class="form-control-file" id="fileInput" />
-                        
+<!--                        <label class="text-muted">Please upload a file less than 700kb.</label>-->
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary" type="submit">Submit</button>
@@ -192,72 +192,23 @@
                 </div>
 
                 <div class="card justify-content-center" id ="card" >
-                    <!-- <div class="card-body">
-                        <img src="http://placehold.it/64x64" class="float-left mr-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                    <img src="..." id="displayimage" class="card-img-top" alt="...">
-                </div>
-
-                <div class="card" id ="card">
-                    <div class="card-body">
-                        <img src="http://placehold.it/64x64" class="float-left mr-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                    <img src="..." class="card-img-top" alt="...">
-                </div>
-
-                <div class="card" id ="card">
-                    <div class="card-body"><img src="http://placehold.it/64x64" class="float-left mr-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                    <img src="..." class="card-img-top" alt="...">
-                </div>
-
-                <div class="card" id ="card">
-                    <div class="card-body">
-                        <img src="http://placehold.it/64x64" class="float-left mr-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                    <img src="..." class="card-img-top" alt="...">
-                </div>
-
-                <div class="card" id ="card">
-                    <div class="card-body">
-                        <img src="http://placehold.it/64x64" class="float-left mr-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                    <img src="..." class="card-img-top" alt="..."> -->
+                <!--card content here-->
                 </div>
 
                 <!-- click to go back to top button -->
+
                 <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
-
-
-                <footer th:fragment="footer" class="navbar navbar-light bg-light">
-                    <p class="navbar-text">&copy; 2021 PET PALS </p>
-                </footer>
-
 
             </main>
         </div>
     </div>
 
+
+
+
+<footer th:fragment="footer" class="navbar navbar-light bg-light">
+    <p class="navbar-text">&copy; 2021 PET PALS </p>
+</footer>
 
 <!--    <footer class="navbar navbar-light bg-light ">-->
 <!--        <p class="navbar-text ">&copy; 2021 PET PALS</p>-->
@@ -301,7 +252,23 @@
 <!--      </div>-->
 <!--    </div>-->
 <!--    -->
-    
+<script>
+    mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    </script>
 <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous">
@@ -315,8 +282,8 @@
     <script src=" js/postForm.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src ="js/filterPosts.js"></script>
-<script src="js/homeScript.js"></script>
-    
+
+
 </body>
 
 </html>
