@@ -5,7 +5,7 @@
 //3) If all information is correct, add all the information into an object array (e.g. formList)
 //4) Print out the formList to check if the information are in the object array
 
-const formList = [];
+let formList = [];
 //let checkboxChecked = [];
 //let isChecked = false;
 const formPost = new PostController();
@@ -18,19 +18,63 @@ const formPost = new PostController();
 //Convert NodeList to array to make use of filter/map
 
 function addPost(imgblob) {
-  console.log("in the function");
+//  console.log("in the function");
   //create variables to store the values from the form
   const name = document.querySelector("#name").value;
   const topic = document.querySelector("#topic").value;
   const avatar = document.querySelector('input[name="avatar"]:checked').value;
   const text = document.querySelector("#text").value;
-  const time = moment().fromNow();
-  // const image = document.querySelector("#fileInput").value;
+  //const time = moment().fromNow();
+  const time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+//   const image = document.querySelector("#fileInput").value;
 
-  addToList(name, topic, avatar, text, imgblob, time);
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('topic', topic);
+    formData.append('avatar', avatar);
+    formData.append('text', text);
+    formData.append('image', imgblob);
+    formData.append('time',time);
+
+//    console.log("blob: " + imgblob)
+   fetch('http://localhost:8080/post/add', {
+               method: 'POST',
+               body: formData
+               })
+               .then(response => response.json())
+               .then(data => {
+//                   console.log('Success:', data);
+                   alert("Successfully added to posts")
+                    getAllPostFromDatabase();
+               })
+               .catch((error) => {
+                   console.error('Error:', error);
+                   alert("Error adding item to posts")
+               });
+
+}
+
+function getAllPostFromDatabase() {
+    formList = [];
+    // go to database and fetch all data
+    //PostList = some fetch call
+    fetch('http://127.0.0.1:8080/post/all')
+        .then((resp) => resp.json())
+        .then(function(data) {
+//            console.log("2. receive data")
+//            console.log('data', data);
+
+            for (let i = 0; i < data.length; i++) {
+                addToList(data[i].name, data[i].topic, data[i].avatar, data[i].text, data[i].image, data[i].time);
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
 }
 
 function addToList(name, topic, avatar, text, image, time) {
+//console.log(name);
   //Just adding the list of items into the array and push the array to formList object
 
   //item object that contain one set of property and value of the inputs
@@ -46,12 +90,10 @@ function addToList(name, topic, avatar, text, image, time) {
 
   //push the item to FormList (array of objects)
 
-  //push the item to FormList (array of objects)
-
   const postList = createHTMLCard(item);
   formList.unshift(postList);
   const printHTML = formList.join("\n");
-  console.log(printHTML);
+//  console.log(printHTML);
 
   //shows all the product.addItem (Product items in productPage.js)
   document.querySelector("#card").innerHTML = printHTML;
@@ -59,7 +101,7 @@ function addToList(name, topic, avatar, text, image, time) {
   //Clear the form for the next input
   clearForm();
 
-  console.log(`"Total Submission": ${formList.length}:`, formList);
+//  console.log(`"Total Submission": ${formList.length}:`, formList);
 }
 
 function clearForm() {
@@ -68,87 +110,4 @@ function clearForm() {
   document.querySelector('input[name="avatar"]:checked').value = "dog";
   document.querySelector("#text").value = "";
   document.querySelector("#fileInput").value = "";
-
-  /*
-    //clear the select option back to first element: "select"
-    document.querySelector("#tour_package").selectedIndex = 0;
-
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
-    });
-    document.querySelector("#radio_agree").checked = false;
-*/
 }
-/*
-//Validation on checkbox - User has to check at least one experience 
-//Check if any of the checkboxes is being checked
-checkboxes.forEach(checkbox => {
-
-    //eventlistener and eventhandler function
-    checkbox.addEventListener("change", function() {
-
-        //Copy the list of checkboxes object to an array list so as to use the filter and map methods to remove unchecked checkboxes and extract the checkbox values from the array.
-
-        let checkboxChecked = Array.from(checkboxes)
-            .filter(elements => elements.checked)
-            .map(elements => elements.value)
-
-        console.log(checkboxChecked);
-        if (checkboxChecked.length > 0) {
-            //remove the customValidity message
-            document.querySelector("#c_food").setCustomValidity("");
-            document.querySelector("#c_food").reportValidity();
-            isChecked = true;
-        } else {
-            isChecked = false;
-
-        }
-
-    });
-});*/
-
-/*
-function setDateFormat(d) {
-    //format the day to dd or month to mm
-    //setting the date to "08" instead of "8" This has effect on the rest of the codes especially in calendar selector
-    if (d < dateFormat) {
-        d = "0" + d;
-    }
-    return d;
-}*/
-
-/*
-//Set the min and max date for selection of the arrival date
-//limit is one month e.g. today's date is min 2021-08-17, max: 2021-09-16
-const dateFormat = 10;
-const today = new Date();
-let day = today.getDate(),
-    month = today.getMonth() + 1,
-    year = today.getFullYear();
-
-
-let nextMonth = month + 1;
-
-//getMonth - Jan return 0, Feb return 1, etc.
-
-
-//format the YYYY-MM-DD
-//e.g. day is 1, format to 01
-//e.g. month is 8, format to 08
-day = setDateFormat(day);
-month = setDateFormat(month);
-nextMonth = setDateFormat(nextMonth);
-
-let todayDate = year + "-" + month + "-" + day;
-let nextMonthDate = year + "-" + nextMonth + "-" + day;
-
-
-//next month day: remain the same as the current day : 1, next month day will be the last day of the current month
-//year : current month is Dec, next month will need to consider next year and 1st month.
-
-console.log(todayDate, nextMonthDate);
-
-document.querySelector("#arrival_date").setAttribute("min", todayDate);
-
-document.querySelector("#arrival_date").setAttribute("max", nextMonthDate);
-*/

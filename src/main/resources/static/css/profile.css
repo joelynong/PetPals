@@ -19,11 +19,43 @@
   max-height: auto;
 }
 
-.card {
+#card {
   width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card.filter-Events {
+   margin: 0;
+}
+
+.card.filter-PetTips {
+   margin: 0;
+}
+
+.card.filter-Recommendations {
+   margin: 0;
 }
 
 #search {
   width: 150px;
   text-align: center;
+}
+
+textarea {
+    width: 100%;
+}
+
+h1 {
+    color: #ffbd59;
+    font-weight: 700;
+}
+.h2 {
+    color: #00c2cb;
+    font-weight: 700;
+}
+
+h2 {
+    color: #00c2cb;
+    font-weight: 700;
 }

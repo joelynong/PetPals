@@ -14,17 +14,27 @@ function handleOnSubmit(e) {
                 // fileDisplayArea.innerHTML = "";
                 var img = new Image();
                 img.src = reader.result;
-                // fileDisplayArea.appendChild(img);   
+                // fileDisplayArea.appendChild(img);
 
+            let sizeInBytes = fileInput.files[0].size;
+            const maxBytes = 700000;
+            console.log(fileInput.files[0].size);
+            if(sizeInBytes < maxBytes) {
                 addPost(reader.result);
+
+            } else {
+
+                alert("Please upload image less than 700KB.")
             }
 
-            reader.readAsDataURL(file);	
+            }
+
+            reader.readAsDataURL(file);
         } else {
-            alert("File not supported, please upload an image.")
-        }
-    }
-    else {
-        addPost('empty');
-    }
-}
+                     alert("File not supported, please upload an image.")
+                 }
+             }
+             else {
+                 addPost('empty');
+             }
+         }
