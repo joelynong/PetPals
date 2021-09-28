@@ -22,16 +22,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" th:href="@{home}">Home </a>
+                <a class="nav-link" id="nav-btn" th:href="@{home}">Home </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" th:href="@{about}">About Us</a>
+                <a class="nav-link" id="nav-btn" th:href="@{about}">About Us</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" th:href="@{profile}">Pet Pals</a>
+                <a class="nav-link" id="nav-btn" th:href="@{profile}">Pet Pals</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#contactus-modal">Contact Us</a>
+                <a class="nav-link" id="nav-btn" href="#" data-toggle="modal" data-target="#contactus-modal">Contact
+                    Us</a>
             </li>
 
         </ul>
@@ -42,8 +43,8 @@
 
 <div th:fragment="menuModal" class="modal fade" id="contactus-modal" tabindex="-1"
      aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-scrollable">
+<!--    -scrollable-->
+    <div class="modal-dialog modal-dialog">
 
         <div class="modal-content">
 
@@ -62,14 +63,14 @@
             <div class="modal-body">
 
                 <form action="mailto:Pet.palssg@gmail.com" method="POST">
-
-                    <h4>You may reach the Pet-Pals team at Pet.palssg@gmail.com</h4>
+                    <img src="images/pet-pals-logos/Dog_thank_you.jpg" class="img-thumbnail" alt="Dog thank you">
+                    <h5>You may reach the Pet-Pals team at Pet.palssg@gmail.com</h5>
 
 
 
                     <div class="buttoncol-sm-6">
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="cusbtn">Submit</button>
 
                     </div>
 
@@ -79,7 +80,7 @@
 
                 <div class="modal-footer">
 
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="cusbtn" data-dismiss="modal">Close</button>
 
                 </div>
 
