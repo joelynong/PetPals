@@ -47,15 +47,65 @@ textarea {
 }
 
 h1 {
+    font-size: 45px;
     color: #ffbd59;
     font-weight: 700;
-}
-.h2 {
-    color: #00c2cb;
-    font-weight: 700;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.3),
+      0px -4px 4px rgba(255,255,255,0.3);
 }
 
 h2 {
+    font-size: 40px;
     color: #00c2cb;
     font-weight: 700;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.3),
+           0px -4px 4px rgba(255,255,255,0.3);
+}
+
+.topicName {
+    font-size: 15px;
+    overflow:hidden;
+}
+
+.topicName:hover {
+    background-color: #ffbd59;
+    color: 	#FFFFFF;
+    border-radius: 10px 0px 10px 0px;
+}
+
+#allTopics {
+    font-size: 20px;
+
+}
+
+#allTopics:hover {
+    background-color: #ffbd59;
+    color: 	#FFFFFF;
+    border-radius: 10px 0px 10px 0px;
+}
+
+#submitButton {
+    background-color: #ffbd59;
+    border: 1px solid #FFFFFF;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+#submitButton:hover {
+    background-color: #00c2cb;
+    border: 1px solid #FFFFFF;
+}
+
+.uploadMsg {
+    font-size:12px;
+}
+
+@media screen and (min-width: 1450px) {
+  .topicName {
+      font-size: 25px;
+  }
+
+  #allTopics {
+      font-size: 30px;
+  }
 }

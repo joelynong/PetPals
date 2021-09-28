@@ -72,21 +72,25 @@
                     <h1>Topics</h1>
                     <ul class="nav flex-column" id = "filterPost">
                         <li class="nav-item">
-                            <a class="nav-link active filterselector" href="#"  data-id = "Recommendations">
-                                <span data-feather="home" ></span> Recommendations <span class="sr-only">(current)</span>
+                            <a class="nav-link active filterselector topicName" href="#Recommendations"  data-id = "Recommendations">
+                                <span></span> Recommendations
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link filterselector" href="#" data-id = "PetTips">
-                                <span data-feather="file"></span> Pet Tips
+                            <a class="nav-link filterselector topicName" href="#PetTips" data-id = "PetTips">
+                                <span></span> Pet Tips
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link filterselector" href="#" data-id = "Events">
-                                <span data-feather="shopping-cart"></span> Events
+                            <a class="nav-link filterselector topicName" href="#Events" data-id = "Events">
+                                <span></span> Events
                             </a>
                         </li>
-                        
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{profile}" id = "allTopics">
+                                <span></span> All Topics
+                            </a>
+                        </li>
                     </ul>
                     
                     </div>
@@ -95,7 +99,7 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Write a post</h1>
+                    <h2>Write a post</h2>
                 </div>
                 <form class="border-bottom" onSubmit= "handleOnSubmit(event);">
                     <label>Choose the avatar that represents you:</label>
@@ -174,10 +178,10 @@
                     <div class="form-group fileinput" >
                         <label>Upload Image Here</label>
                         <input type="file" class="form-control-file" id="fileInput" />
-<!--                        <label class="text-muted">Please upload a file less than 700kb.</label>-->
+                        <label class="text-muted uploadMsg">Please upload a file less than 700kb.</label>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button class="btn btn-primary" id = "submitButton" type="submit">Submit</button>
                     </div>
                 </form>
 
