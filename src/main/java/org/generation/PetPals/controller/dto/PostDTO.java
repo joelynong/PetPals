@@ -11,6 +11,7 @@ public class PostDTO {
     private String image;
     private String time;
 
+    //This set of constructors for database
     public PostDTO( Integer index, String name, String topic, String avatar, String text, String image, String time )
     {
         this.index = index;
@@ -22,6 +23,7 @@ public class PostDTO {
         this.time = time;
     }
 
+    //This set of constructors for display purpose
     public PostDTO( String name, String topic, String avatar, String text, String image, String time )
     {
         this.name = name;
