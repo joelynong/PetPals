@@ -24,7 +24,7 @@ function handleOnSubmit(e) {
 
             } else {
 
-                alert("Please upload image less than 700KB.")
+                alert("Please upload image less than 650KB.")
             }
 
             }
