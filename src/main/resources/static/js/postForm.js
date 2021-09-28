@@ -37,8 +37,7 @@ function addPost(imgblob) {
     formData.append('time',time);
 
 //    console.log("blob: " + imgblob)
-   fetch('http://localhost:8080/post/add', {
-               method: 'POST',
+   fetch('https://petpalssocialmedia.herokuapp.com/post/add', { method: 'POST',
                body: formData
                })
                .then(response => response.json())
@@ -58,7 +57,7 @@ function getAllPostFromDatabase() {
     formList = [];
     // go to database and fetch all data
     //PostList = some fetch call
-    fetch('http://127.0.0.1:8080/post/all')
+    fetch('https://petpalssocialmedia.herokuapp.com/post/all')
         .then((resp) => resp.json())
         .then(function(data) {
 //            console.log("2. receive data")
