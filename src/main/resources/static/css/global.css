@@ -2,3 +2,35 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.cusbtn {
+    background-color: #ffbd59;
+    border-radius:6px;
+    border:#00c2cb;
+    font-size: 20px;
+    padding: 8px 20px;
+    color: white;
+}
+
+
+.cusbtn:hover {
+
+    background-color: #00c2cb;
+}
+
+h5 {
+    font-size: 25px;
+    text-align: center;
+    padding: 20px 20px;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3),
+    0px -4px 10px rgba(255,255,255,0.3);
+    color:grey;
+}
+
+#nav-btn{
+    font-size: 23px;
+    color: #646566
+    }
+
+#nav-btn:hover {
+        color:  #00c2cb; /* Add a dark-grey background on hover */
+      }
