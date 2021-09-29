@@ -11,7 +11,7 @@
 
 <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light"> <!---navbar--->
 
-    <a class="navbar-brand" href="home.html">
+    <a class="navbar-brand" th:href="@{home}">
         <img src="images/pet-pals-logos/pet-pals-transparent-min.png" class = "logo" width=100px></a>
 
 
@@ -63,7 +63,7 @@
             <div class="modal-body">
 
                 <form action="mailto:pet.palssg@gmail.com" method="POST">
-                    <img src="images/pet-pals-logos/Dog_thank_you.jpg" class="img-thumbnail" alt="Dog thank you">
+                    <img src="images/cdpet-pals-logos/Dog_thank_you.jpg" class="img-thumbnail" alt="Dog thank you">
                     <h5 id="exampleModalLabel">You may reach the Pet Pals team at pet.palssg@gmail.com</h5>
 
 
