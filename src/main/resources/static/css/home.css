@@ -93,6 +93,10 @@
     text-decoration: none;
     color: rgb(97, 95, 95);
   }
+  
+   .slider{
+      padding-bottom: 40px;
+    }
 
   #myBtn {
     display: none; 
