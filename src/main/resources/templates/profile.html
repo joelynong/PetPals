@@ -27,7 +27,7 @@
 
 </head>
 
-<body onload="getAllPostFromDatabase()">
+<body onload = "getAllPostFromDatabase()">
 <!--//we can now insert the th fragment for navbar and menuModal-->
 <!--for every html pages that need this universal code-->
 <div th:insert="fragments/navbar.html :: navbar"></div>
@@ -87,7 +87,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link filterselector" href="#" data-id = "Recommendations PetTips Events" id = "allTopics">
+                            <a class="nav-link filterselector" href="#All" id = "allTopics" data-id = "All">
                                 <span></span> All Topics
                             </a>
                         </li>
@@ -286,7 +286,6 @@
     <script src=" js/postForm.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src ="js/filterPosts.js"></script>
-
 
 </body>
 

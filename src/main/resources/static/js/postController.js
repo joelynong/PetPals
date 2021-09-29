@@ -100,7 +100,11 @@ class PostController {
 
 //removed "index"
 const createHTMLCard = (post) => {
-  return `<div class="card filter-${post.topic}">
+
+  const hash = window.location.hash;
+  const display = (hash == "#All") ? 'block' : ((hash == ("#" + post.topic) ? 'block' : 'none'));
+
+  return `<div class="card filter-${post.topic}" style="display:${display};">
                 <div class="card-body">
                     <img src='../images/avatar-images/profile-${
                       post.avatar
