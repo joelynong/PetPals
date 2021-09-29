@@ -102,7 +102,7 @@ class PostController {
 const createHTMLCard = (post) => {
 
   const hash = window.location.hash;
-  const display = (hash == "#All") ? 'block' : ((hash == ("#" + post.topic) ? 'block' : 'none'));
+  const display = (hash == "") ? 'block' : ((hash == "#All") ? 'block' : ((hash == ("#" + post.topic) ? 'block' : 'none')));
 
   return `<div class="card filter-${post.topic}" style="display:${display};">
                 <div class="card-body">
