@@ -6,38 +6,30 @@
 
 $(".filterselector").click(function () {
   var id = $(this).data("id");
-  console.log("selected", id);
 
-  //   if (id === "Recommendations") {
-  //     $(".filter-Recommendations").show();
-  //     $(".filter-Pet.Tips").hide();
-  //     $(".filter-Events").hide();
-  //   } else if (id === "Pet Tips") {
-  //     $(".filter-Recommendations").hide();
-  //     $(".filter-Pet.Tips").show();
-  //     $(".filter-Events").hide();
-  //   } else if (id === "Events") {
-  //     $(".filter-Recommendations").hide();
-  //     $(".filter-Pet.Tips").hide();
-  //     $(".filter-Events").show();
-  const filterArray = ["Recommendations", "PetTips", "Events"];
-  filterArray.forEach((item) => {
-    id === item ? $(".filter-" + item).show() : $(".filter-" + item).hide();
-  });
+     if (id === "Recommendations") {
+       $(".filter-Recommendations").show();
+       $(".filter-PetTips").hide();
+       $(".filter-Events").hide();
+     } else if (id === "PetTips") {
+       $(".filter-Recommendations").hide();
+       $(".filter-PetTips").show();
+       $(".filter-Events").hide();
+     } else if (id === "Events") {
+       $(".filter-Recommendations").hide();
+       $(".filter-PetTips").hide();
+       $(".filter-Events").show();
+       } else if (id === "All") {
+        $(".filter-Recommendations").show();
+       $(".filter-PetTips").show();
+       $(".filter-Events").show();
+       }
 
-  //   id == "Recommendations"
-  //     ? $(".filter-Recommendations").show()
-  //     : $(".filter-Recommendations").hide();
-  //   id == "Pet Tips"
-  //     ? $(".filter-Pet.Tips").show()
-  //     : $(".filter-Pet.Tips").hide();
-  //   id == "Events" ? $(".filter-Events").show() : $(".filter-Events").hide();
-  // $(".filter-Recommendations").visible(id == "Recommendataion");
-  // $(".filter-Pet.Tips").visible(id == "Pet Tips");
-  // $(".filter-Events").visible();
-  //}
-  //   const filteredList = formList.filter(item => item.);
-  //   console.log(value);
+//  const filterArray = ["Recommendations", "PetTips", "Events"];
+//  filterArray.forEach((item) => {
+//    id === item ? $(".filter-" + item).show() : $(".filter-" + item).hide();
+//  });
+
 });
 
 // this overrides `contains` to make it case insenstive
