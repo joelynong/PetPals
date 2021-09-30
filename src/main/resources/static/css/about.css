@@ -170,7 +170,6 @@ text-shadow: 0px 2px 3px #666;
   justify-content: space-evenly;
   align-items:center;
   margin-top: 2rem;
-
 }
 
 .team-member {
@@ -181,6 +180,7 @@ text-shadow: 0px 2px 3px #666;
   position: relative;
   opacity: 0.9;
   transition: opacity 0.5s;
+  white-space: nowrap;
 }
 
 .team-member:hover {
@@ -200,6 +200,7 @@ text-shadow: 0px 2px 3px #666;
   color: #ffbd59;
   margin-top: 2rem;
    text-shadow: 0px 4px 4px lightgrey;
+    white-space:nowrap;
 }
 
 .team-member-name span {
@@ -208,6 +209,7 @@ text-shadow: 0px 2px 3px #666;
   color: #ffbd59;
   margin-top: 2rem;
    text-shadow: 0px 4px 4px lightgrey;
+    white-space:nowrap;
 }
 
 
@@ -216,9 +218,9 @@ text-shadow: 0px 2px 3px #666;
   font-weight: 600;
   color:#ffbd59;
   margin-top: :2rem;
-     text-shadow: 0px 4px 4px lightgrey;
+  text-shadow: 0px 4px 4px lightgrey;
+  white-space:nowrap;
 }
-
 
 .connect-btn {
   background-color: lightgray;
@@ -333,9 +335,7 @@ text-shadow: 0px 2px 3px #666;
 
 /* Responsive */
 @media (max-width: 1400px) {
-  .floating-bg {
-    top: -120vw;
-  }
+
 
   .section-heading {
     font-size: 8rem;
@@ -362,167 +362,90 @@ text-shadow: 0px 2px 3px #666;
 
 }
 
-@media (max-width: 1150px) {
-  /* .floating-bg {
-    top: -110vw;
-  } */
-
-}
-
-@media (max-width: 975px) {
-    html {
-    font-size: 50%;
-  }
-
-  .value {
-    margin: 5rem 0;
-    width:auto;
-  }
-
-.value-text, .value-text-2{
-  font-size: 6rem;
-  padding-left: 10rem;
-}
-
-  .team-member {
-    margin: 5rem 0;
-    width: auto;
-  }
-
-   .team-member-name {
-    padding-left: 1rem;
-    font-size: 4.3rem;
-  }
-
-   .aka {
-    padding-left: 1rem;
-    font-size: 3.5rem;
-  }
-
-     .connect-btn {
-    font-size: 3rem;
-  }
-
-    .story-heading {
-  font-size: 5rem;
-}
-
-  .story-paragraph {
-  font-size: 3rem;
-}
-
-  .section-heading {
-    margin-bottom: 4rem;
-    margin-top: 4rem;
-  }
-
-}
-
 
 @media (max-width: 600px) {
-  html {
-    font-size: 50%;
-  }
 
-  .value {
-    margin: 5rem 0;
-    width:70rem;
-  }
-
-.value-text, .value-text-2{
-  font-size: 6rem;
-  padding-left: 10rem;
-}
-
-  .team-member {
-    margin: 5rem 0;
-    width: auto;
-  }
-
-   .team-member-name {
-    padding-left: 1rem;
-    font-size: 4.3rem;
-  }
-
-   .aka {
-    padding-left: 1rem;
-    font-size: 3.5rem;
-  }
-
-     .connect-btn {
-    font-size: 3rem;
-  }
-
-    .story-heading {
-  font-size: 5rem;
-}
-
-  .story-paragraph {
-  font-size: 3rem;
-}
-
-  .section-heading {
-    margin-bottom: 4rem;
-    margin-top: 4rem;
-  }
-}
-
-@media (max-width: 550px) {
-  html {
-    font-size: 45%;
-  }
-
-  .section-heading {
-    font-size: auto;
-    margin-bottom: 1rem;
+  #heading{
+    font-size: 3.2rem;
+margin-bottom: 2.5rem;
   }
 
   .mission-text{
-    font-size: 3.3rem;
+    font-size: 1.8rem;
   }
 
-.value-text, .value-text-2{
-  font-size: 3.8rem;
-padding-left: 0.5rem;
-width:120%;
+.mission-wrapper{
+  margin-top: -20%;
 }
 
+.bg-video{
+  width: 100%;
+  height: auto;
+}
+
+#video2{
+  margin-top: -75%;
+}
+
+.values-wrapper{
+  margin-top: -30%;
+  background-color: whitesmoke;
+  height: 47rem;
+}
+
+.values{
+  margin-top: -0.5rem;
+}
+
+.value-text, .value-text-2{
+  font-size: 1.8rem;
+width:120%;
+color: #666;
+}
+
+.value-text::first-letter,
+.value-text-2::first-letter{
+  font-size:3rem;
+}
+
+.team-wrapper{
+  margin-top: -2rem;
+}
 
   .team-member {
-    margin: 4rem;
-    width: auto;
+    margin:2rem;
+    width:80rem;
   }
 
      .team-member-name {
-    padding-left: 1rem;
-    font-size: 3.5rem;
+    padding-left: 0.5rem;
+    font-size: 1.8rem;
   }
 
-  .team-member-name span{
-    font-size: 2.6rem;
+    .team-member-name span {
+    display: none;
   }
 
    .aka {
-    padding-left: 1rem;
-    font-size: 2.8rem;
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
   }
 
       .connect-btn {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
 
   .story-btn {
-  width: 4rem;
-  height: 4rem;
+  width: 2.2rem;
+  height: 2.2rem;
   }
 
       .story-heading {
-  font-size: 4rem;
+  font-size: 1.8rem;
 }
   .story-paragraph {
-  font-size: 2.5rem;
+  font-size: 1.2rem;
 }
-
 
 }
 /* End of Responsive */
