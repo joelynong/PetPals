@@ -30,7 +30,8 @@ margin bottom: 5rem;
     0px -4px 10px rgba(255,255,255,0.3);
 }
 
-#heading {
+#heading,
+#heading2 {
   opacity: 0.9;
   text-align: center;
   margin: 0;
@@ -306,7 +307,9 @@ text-shadow: 0px 2px 3px #666;
   font-size: 1.4rem;
   color: #fff;
   text-align: justify;
-  /* letter-spacing: 0.1rem; */
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: normal;
    text-shadow: 0px 4px 4px #282828;
 }
 /* End of Section 3 */
@@ -363,49 +366,56 @@ text-shadow: 0px 2px 3px #666;
 }
 
 
-@media (max-width: 600px) {
-
+@media (max-width: 450px) {
   #heading{
     font-size: 3.2rem;
 margin-bottom: 2.5rem;
+margin-top: -5rem;
   }
 
-  .mission-text{
+
+ .mission-text{
     font-size: 1.8rem;
   }
-
-.mission-wrapper{
-  margin-top: -20%;
-}
 
 .bg-video{
   width: 100%;
   height: auto;
 }
 
-#video2{
+.section-2{
   margin-top: -75%;
 }
 
+  #heading2{
+font-size: 3.2rem;
+margin-top: 10rem;
+margin-bottom:0rem;
+  }
+
 .values-wrapper{
-  margin-top: -30%;
   background-color: whitesmoke;
-  height: 47rem;
+  padding-bottom: 0rem;
 }
 
 .values{
-  margin-top: -0.5rem;
+margin: 15%;
 }
 
 .value-text, .value-text-2{
   font-size: 1.8rem;
 width:120%;
 color: #666;
+
 }
 
 .value-text::first-letter,
 .value-text-2::first-letter{
   font-size:3rem;
+}
+
+.section-3{
+margin-top: 2rem;
 }
 
 .team-wrapper{
@@ -431,7 +441,7 @@ color: #666;
     font-size: 1.2rem;
   }
 
-      .connect-btn {
+   .connect-btn {
     font-size: 1.2rem;
   }
 
@@ -443,6 +453,7 @@ color: #666;
       .story-heading {
   font-size: 1.8rem;
 }
+
   .story-paragraph {
   font-size: 1.2rem;
 }
