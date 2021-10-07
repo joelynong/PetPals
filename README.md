@@ -1,4 +1,4 @@
-<img src=”https://github.com/joelynong/PetPals/blob/main/src/main/resources/static/images/herobanner.png" alt=”Pet Pals hero banner”/>
+![Banner](https://github.com/joelynong/PetPals/blob/main/src/main/resources/static/images/herobanner.png | width=600)
 
 # 🐕🐈 PET PALS PROJECT 🐇🐢
 
@@ -57,7 +57,7 @@ Behavourial Skills: Communication, Orientation to Detail, Proactiveness, Teamwor
 
 ## 🐶 PET PALS LOGO 🐱
 
-![Logo](https://github.com/joelynong/PetPals/blob/main/src/main/resources/static/images/pet-pals-logos/pet-pals-transparent-min.png)
+![Logo](https://github.com/joelynong/PetPals/blob/main/src/main/resources/static/images/pet-pals-logos/pet-pals-transparent-min.png | width=500)
 
     
 ## 🎨 LOGO COLOR REFERENCE
