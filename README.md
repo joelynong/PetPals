@@ -57,7 +57,7 @@ Behavourial Skills: Communication, Orientation to Detail, Proactiveness, Teamwor
 
 ## 🐶 PET PALS LOGO 🐱
 
-![Logo](https://github.com/joelynong/PetPals/blob/main/src/main/resources/static/images/pet-pals-logos/pet-pals-transparent-min.png)
+![Logo](https://github.com/joelynong/PetPals/blob/main/src/main/resources/static/images/pet-pals-logos/pet-pals-transparent-min2.png)
 
     
 ## 🎨 LOGO COLOR REFERENCE
